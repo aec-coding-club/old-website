@@ -14,7 +14,7 @@ mongoose.connect(process.env.MONGO_URL, () =>
 	console.log("Cloud DB Connected")
 );
 //
-if (process.env.PRODUCTION === true) {
+if (process.env.PRODUCTION === "true") {
 	app.use(express.static(path.join(__dirname, "../frontend/build")));
 	app.get("*", (req, res) => {
 		res.sendFile(path.join(__dirname, "../frontend/build"));

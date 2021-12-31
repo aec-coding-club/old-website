@@ -1,13 +1,24 @@
 {
-  "name": "aec-cc-website",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "nodemon backend\server.js"
-   "start":"node backend\server.js",
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+	"name": "aec-cc-website",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"test": "nodemon backend/server.js",
+		"start": "node backend/server.js",
+		"client": "cd frontend && yarn start",
+		"build": "cd frontend && yarn && yarn build",
+		"dev": "concurrently \"yarn client\" \"yarn test\"",
+		"heroku-postbuild": "yarn build"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"cors": "^2.8.5",
+		"dotenv": "^10.0.0",
+		"express": "^4.17.2",
+		"mongoose": "^6.1.4",
+		"path": "^0.12.7"
+	}
 }

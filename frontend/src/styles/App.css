@@ -1,4 +1,8 @@
+* {
+	font-family: sans-serif;
+}
 .MainBody {
 	padding: 10px;
-	min-height: 80vh;
+	min-height: 180vh;
+	padding-top: 60px;
 }

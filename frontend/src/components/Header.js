@@ -1,11 +1,17 @@
 import React from "react";
-import { Navbar, NavDropdown, Nav, Container } from "react-bootstrap";
+import { Navbar, NavDropdown, Nav } from "react-bootstrap";
+import { useNavigate } from "react-router";
 import "./../styles/Header.css";
 const Header = () => {
+	const navigate = useNavigate();
 	return (
 		<div className="Header">
 			<Navbar bg="light" expand="lg" fixed="top">
-				<Navbar.Brand href="#home" style={{ marginLeft: "30px" }}>
+				<Navbar.Brand
+					style={{ marginLeft: "30px" }}
+					onClick={() => navigate("/")}
+					className="navbrand"
+				>
 					AEC Coding Club
 				</Navbar.Brand>
 				<Navbar.Toggle
@@ -23,8 +29,9 @@ const Header = () => {
 							marginRight: "30px",
 						}}
 					>
-						<Nav.Link href="#home">Home</Nav.Link>
-						<Nav.Link href="#link">Link</Nav.Link>
+						<Nav.Link onClick={() => navigate("/hehe")}>
+							Home
+						</Nav.Link>
 						<NavDropdown title="Dropdown" id="basic-nav-dropdown">
 							<NavDropdown.Item href="#action/3.1">
 								Action

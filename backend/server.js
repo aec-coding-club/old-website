@@ -14,6 +14,9 @@ mongoose.connect(process.env.MONGO_URL, () =>
 	console.log("Cloud DB Connected")
 );
 //
+const indexRoutes = require("./routes/index");
+app.use("/api", indexRoutes);
+//
 if (process.env.PRODUCTION === "true") {
 	app.use(express.static(path.join(__dirname, "../frontend/build")));
 	app.get("*", (req, res) => {

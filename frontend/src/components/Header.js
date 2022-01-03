@@ -6,9 +6,9 @@ const Header = () => {
 	const navigate = useNavigate();
 	return (
 		<div className="Header">
-			<Navbar bg="light" expand="lg" fixed="top">
+			<Navbar bg="primary" expand="lg">
 				<Navbar.Brand
-					style={{ marginLeft: "30px" }}
+					style={{ marginLeft: "20px" }}
 					onClick={() => navigate("/")}
 					className="navbrand"
 				>
@@ -16,37 +16,25 @@ const Header = () => {
 				</Navbar.Brand>
 				<Navbar.Toggle
 					aria-controls="basic-navbar-nav"
-					style={{ marginRight: "30px" }}
+					style={{ marginRight: "20px" }}
 				/>
 				<Navbar.Collapse
 					id="basic-navbar-nav"
-					style={{ marginLeft: "30px" }}
+					style={{ marginLeft: "20px" }}
 				>
 					<Nav
 						className="ms-auto"
-						style={{
-							fontSize: "20px",
-							marginRight: "30px",
-						}}
+						style={{ marginRight: "20px", fontSize: "20px" }}
 					>
 						<Nav.Link onClick={() => navigate("/")}>Home</Nav.Link>
-
-						<Nav.Link onClick={() => navigate("/events")}>
+						<Nav.Link onClick={() => navigate("/")}>
 							Events
 						</Nav.Link>
-
-						<Nav.Link onClick={() => navigate("/members")}>
-							Membership
-						</Nav.Link>
-
-						<Nav.Link onClick={() => navigate("/about")}>
-							About
-						</Nav.Link>
-						{/* <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-							<NavDropdown.Item href="#action/3.1">
-								Action
-							</NavDropdown.Item>
-						</NavDropdown> */}
+						<NavDropdown title="Login as" id="basic-nav-dropdown">
+							<NavDropdown.Item>Member</NavDropdown.Item>
+							<NavDropdown.Item>Coordinator</NavDropdown.Item>
+						</NavDropdown>
+						<Nav.Link onClick={() => navigate("/")}>About</Nav.Link>
 					</Nav>
 				</Navbar.Collapse>
 			</Navbar>

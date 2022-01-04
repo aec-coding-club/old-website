@@ -1,10 +1,15 @@
 import "./bootstrap.min.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { useEffect } from "react";
+import "./styles/App.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Homepage from "./pages/Homepage";
-import "./styles/App.css";
+import Events from "./pages/Events";
+import Member from "./pages/Member";
+import Admin from "./pages/Admin";
+import About from "./pages/About";
+import Groups from "./pages/Groups";
 function App() {
 	useEffect(() => {
 		document.title = "AEC Coding Club";
@@ -16,9 +21,11 @@ function App() {
 				<div className="MainBody">
 					<Routes>
 						<Route exact path="/" element={<Homepage />} />
-						<Route exact path="/events" element={<Homepage />} />
-						<Route exact path="/members" element={<Homepage />} />
-						<Route exact path="/about" element={<Homepage />} />
+						<Route exact path="/events" element={<Events />} />
+						<Route exact path="/member" element={<Member />} />
+						<Route exact path="/admin" element={<Admin />} />
+						<Route exact path="/about" element={<About />} />
+						<Route exact path="/groups" element={<Groups />} />
 					</Routes>
 				</div>
 				<Footer />

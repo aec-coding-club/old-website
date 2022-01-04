@@ -13,7 +13,7 @@ const Header = () => {
 					className="navbrand"
 				>
 					AEC Coding Club &nbsp;
-					<Image src="images/club_logo_transparent.png" width={20} />
+					<Image src="images/club_logo_transparent.png" width={25} />
 				</Navbar.Brand>
 				<Navbar.Toggle
 					aria-controls="basic-navbar-nav"

@@ -6,6 +6,7 @@ const Footer = () => {
 	const navigate = useNavigate();
 	const fblink = "https://www.google.com";
 	const gmaillink = "https://www.google.com";
+	const aecwebsitelink = "";
 	return (
 		<div className="Footer">
 			<div className="logos">
@@ -13,6 +14,7 @@ const Footer = () => {
 					src={"images/aec_logo.jpg"}
 					width={40}
 					className="logo"
+					onClick={() => (window.location.href = aecwebsitelink)}
 				/>
 				<Image
 					src={"images/fb_logo.png"}

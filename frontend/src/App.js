@@ -26,6 +26,7 @@ function App() {
 						<Route exact path="/admin" element={<Admin />} />
 						<Route exact path="/about" element={<About />} />
 						<Route exact path="/groups" element={<Groups />} />
+						<Route path="*" element={<Homepage />} />
 					</Routes>
 				</div>
 				<Footer />
